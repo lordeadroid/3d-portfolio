@@ -1,8 +1,15 @@
-import React from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <p>Hello, world</p>,
+  },
+]);
+
 const App = (): React.JSX.Element => {
-  return <div>Hello, World</div>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
